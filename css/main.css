@@ -1,0 +1,191 @@
+/*** Media ***
+- Mobile: 375px
+- Desktop: 1440px
+*/
+
+/*** General Styles ***/
+@charset "UTF-8";
+
+:root {
+	--very-dark-desaturated-blue: hsl(238, 29%, 16%);
+	--soft-red: hsl(14, 88%, 65%);
+	--soft-violet: hsl(273, 75%, 66%);
+	--soft-blue: hsl(240, 73%, 65%);
+	/* Text */
+	--very-dark-grayish-blue: hsl(237, 12%, 33%);
+	--dark-grayish-blue: hsl(240, 6%, 50%);
+	/* Dividers */
+	--light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: grid;
+	place-content: center;
+	padding: 30px;
+}
+
+img {
+	max-width: 100%;
+}
+
+.attribution {
+	color: var(--white-main-heading);
+	font-size: 11px;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+/*** Page Styles ***/
+body {
+	height: 100vh;
+	font-family: 'Kumbh Sans', sans-serif;
+	font-size: 12px;
+	background: linear-gradient(
+		0deg,
+		var(--soft-blue) 0%,
+		var(--soft-violet) 100%
+	);
+}
+
+img {
+	display: block;
+}
+
+.card {
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 60px;
+	display: flex;
+	gap: 60px;
+	margin: auto;
+	width: 90%;
+}
+
+.card .image .illustration {
+	background: url('../images/illustration-woman-online-desktop.svg');
+	background-size: cover;
+	width: 472px;
+	height: 359px;
+	position: relative;
+	left: -140px;
+	margin-right: -140px;
+}
+
+.card .image .pattern {
+	background: url(../images/bg-pattern-desktop.svg);
+	background-size: cover;
+	position: absolute;
+	bottom: -15%;
+	width: 476px;
+	height: 465px;
+}
+
+.card .image .box {
+	background: url(../images/illustration-box-desktop.svg);
+	background-size: cover;
+	position: absolute;
+	bottom: 114px;
+	left: -14px;
+	width: 191px;
+	height: 108px;
+}
+
+.card .content {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+}
+
+.card .content h1 {
+	font-size: 2em;
+}
+
+.card .content ul {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+}
+
+.card .content li {
+	list-style: none;
+}
+
+.card .content li .main-text {
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.card .content li .main-text .arrow {
+	cursor: pointer;
+	transform: rotate(0deg);
+	transition: all 0.5s;
+}
+.card .content li .sec-text {
+	margin-top: 1em;
+	width: fit-content;
+	max-width: 100%;
+	transition: all 0.5s;
+}
+
+.card .content li:not(li.active) .sec-text {
+	display: none;
+}
+
+.card .content li.active .sec-text {
+	display: block;
+}
+
+.card .content li.active .main-text {
+	font-weight: bold;
+}
+
+.card .content li.active .main-text .arrow {
+	transform: rotate(180deg);
+}
+
+@media (max-width: 997px) {
+	body {
+		height: auto;
+	}
+
+	.card {
+		width: 80%;
+		flex-direction: column;
+		margin-top: 80px;
+	}
+
+	.card .image {
+		margin-bottom: -150px;
+	}
+	.card .image .illustration {
+		background-image: url(../images/illustration-woman-online-mobile.svg);
+		background-size: cover;
+		width: 198px;
+		height: 150px;
+		left: 70px;
+		top: -150px;
+		margin-right: 0px;
+	}
+
+	.card .image .pattern {
+		background-image: url(../images/bg-pattern-mobile.svg);
+		background-size: cover;
+		width: 198px;
+		height: 85px;
+	}
+
+	.card .image .box {
+		display: none;
+	}
+}
