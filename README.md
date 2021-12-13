@@ -38,8 +38,8 @@ Mobile
 
 ### Links
 
--   [Solution URL](https://github.com/MuhammadM1998/FAQ-Accordion-Card)
--   [Live Site URL](https://muhammadm1998.github.io/FAQ-Accordion-Card/)
+-   [Solution URL](https://github.com/MuhammadM1998/FrontendMentor-FAQ-Accordion-Card)
+-   [Live Site URL](https://muhammadm1998.github.io/FrontendMentor-FAQ-Accordion-Card/)
 
 ## My process
 
