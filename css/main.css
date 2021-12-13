@@ -18,174 +18,235 @@
 	--light-grayish-blue: hsl(240, 5%, 91%);
 }
 
-* {
+*,
+*::before,
+*::after {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
 body {
+	min-height: 100vh;
 	display: grid;
 	place-content: center;
-	padding: 30px;
+	max-width: 1440px;
 }
 
 img {
+	display: block;
 	max-width: 100%;
 }
 
 .attribution {
-	color: var(--white-main-heading);
+	margin-top: 10px;
 	font-size: 11px;
 	text-align: center;
-	margin-top: 10px;
 }
 
 .attribution a {
-	color: hsl(228, 45%, 44%);
+	color: white;
 }
 
 /*** Page Styles ***/
 body {
-	height: 100vh;
+	background: linear-gradient(var(--soft-violet), var(--soft-blue));
+	background-repeat: no-repeat;
+	background-size: cover;
 	font-family: 'Kumbh Sans', sans-serif;
 	font-size: 12px;
-	background: linear-gradient(
-		0deg,
-		var(--soft-blue) 0%,
-		var(--soft-violet) 100%
-	);
+	padding: 20px;
 }
 
-img {
-	display: block;
+main {
+	max-width: 1200px;
 }
 
 .card {
-	background-color: #fff;
-	border-radius: 10px;
-	padding: 60px;
+	background-color: white;
+	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.445);
 	display: flex;
+	justify-content: space-between;
 	gap: 60px;
-	margin: auto;
+	width: 80em;
+	height: 40em;
+	margin: 0 auto;
+	border-radius: 25px;
+}
+
+.card .image,
+.card .content {
+	flex: 1 1 50%;
+}
+
+.card .image {
+	position: relative;
+}
+
+.card .image-desktop .inner {
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.card .image .woman,
+.card .image .pattern,
+.card .image-desktop .box {
+	position: absolute;
+}
+
+.card .image-desktop .woman {
+	top: 50%;
+	transform: translate(-15%, -50%);
+}
+
+.card .image-desktop .pattern {
+	transform: scale(2.1) translate(-35%, -4%);
+}
+
+.card .image-desktop .box {
+	top: 205px;
+	left: -83px;
+}
+
+.card .image-desktop .box img {
 	width: 90%;
 }
 
-.card .image .illustration {
-	background: url('../images/illustration-woman-online-desktop.svg');
-	background-size: cover;
-	width: 472px;
-	height: 359px;
-	position: relative;
-	left: -140px;
-	margin-right: -140px;
-}
-
-.card .image .pattern {
-	background: url(../images/bg-pattern-desktop.svg);
-	background-size: cover;
-	position: absolute;
-	bottom: -15%;
-	width: 476px;
-	height: 465px;
-}
-
-.card .image .box {
-	background: url(../images/illustration-box-desktop.svg);
-	background-size: cover;
-	position: absolute;
-	bottom: 114px;
-	left: -14px;
-	width: 191px;
-	height: 108px;
-}
-
 .card .content {
+	padding: 60px 30px;
 	display: flex;
 	flex-direction: column;
 	gap: 2em;
 }
 
-.card .content h1 {
-	font-size: 2em;
+.card .content .faq-title {
+	color: var(--very-dark-desaturated-blue);
+	font-size: 3em;
 }
 
-.card .content ul {
+.card .content .faq-list {
 	display: flex;
 	flex-direction: column;
 	gap: 2em;
 }
 
-.card .content li {
-	list-style: none;
+.card .content .faq-list .faq {
+	display: flex;
+	flex-direction: column;
+	padding: 5px;
+	border-bottom: 1px solid var(--light-grayish-blue);
+	display: block;
+	width: 90%;
 }
 
-.card .content li .main-text {
-	cursor: pointer;
+.card .content .faq-list .faq .question {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-}
-.card .content li .main-text .arrow {
+	margin-bottom: 1em;
 	cursor: pointer;
+	color: var(--very-dark-grayish-blue);
+}
+
+.card .content .faq-list .faq .question:hover {
+	color: var(--soft-red);
+}
+
+.card .content .faq-list .faq .question .arrow {
 	transform: rotate(0deg);
-	transition: all 0.5s;
-}
-.card .content li .sec-text {
-	margin-top: 1em;
-	width: fit-content;
-	max-width: 100%;
-	transition: all 0.5s;
+	transition: 0.5s;
 }
 
-.card .content li:not(li.active) .sec-text {
+.card .content .faq-list .faq .answer {
 	display: none;
+	color: var(--dark-grayish-blue);
+	font-size: 0.9em;
 }
 
-.card .content li.active .sec-text {
-	display: block;
-}
-
-.card .content li.active .main-text {
+.card .content .faq-list .faq.active .question {
+	color: var(--very-dark-desaturated-blue);
 	font-weight: bold;
 }
 
-.card .content li.active .main-text .arrow {
+.card .content .faq-list .faq.active .question .arrow {
 	transform: rotate(180deg);
 }
 
-@media (max-width: 997px) {
-	body {
-		height: auto;
-	}
+.card .content .faq-list .faq.active .answer {
+	display: block;
+}
 
-	.card {
-		width: 80%;
-		flex-direction: column;
-		margin-top: 80px;
+/* Large Screens */
+@media (min-width: 769px) {
+	.image-desktop {
+		display: block;
 	}
-
-	.card .image {
-		margin-bottom: -150px;
-	}
-	.card .image .illustration {
-		background-image: url(../images/illustration-woman-online-mobile.svg);
-		background-size: cover;
-		width: 198px;
-		height: 150px;
-		left: 70px;
-		top: -150px;
-		margin-right: 0px;
-	}
-
-	.card .image .pattern {
-		background-image: url(../images/bg-pattern-mobile.svg);
-		background-size: cover;
-		width: 198px;
-		height: 85px;
-	}
-
-	.card .image .box {
+	.image-mobile {
 		display: none;
+	}
+}
+
+/* Medium Screens */
+@media (max-width: 997px) {
+	.card {
+		width: 60em;
+		height: 38em;
+	}
+
+	.card .image-desktop .box {
+		top: 215px;
+		left: -60px;
+	}
+
+	.card .image-desktop .box img {
+		width: 65%;
+	}
+
+	.card .content {
+		padding: 30px;
+	}
+}
+
+/* Small Screens */
+@media (max-width: 768px) {
+	.card {
+		flex-direction: column;
+		position: relative;
+		width: 30em;
+		height: 42em;
+		margin-top: 5.5em;
+		gap: 0;
+	}
+
+	.image-desktop {
+		display: none;
+	}
+
+	.image-mobile {
+		display: block;
+		flex: 1 1 15% !important;
+	}
+
+	.image-mobile .illustration {
+		position: absolute;
+		width: 100%;
+		top: -90%;
+		left: 25%;
+	}
+
+	.image-mobile .illustration img {
+		width: 50%;
+	}
+
+	.card .content {
+		padding-top: 2em;
+		padding-bottom: 1em;
+		margin-top: -2em;
+		flex: 1 1 85%;
+	}
+
+	.card .content .faq-title {
+		text-align: center;
 	}
 }

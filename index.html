@@ -20,69 +20,85 @@
 <body>
   <main>
     <div class="card">
-      <div class="image">
-        <div class="illustration">
-          <div class="pattern"></div>
-          <div class="box"></div>
+      <section class="image image-desktop">
+        <div class="inner">
+          <div class="pattern">
+            <img src="./images/bg-pattern-desktop.svg" alt="Vector Illustration Shadow">
+          </div>
+          <div class="woman">
+            <img src="./images/illustration-woman-online-desktop.svg" alt="Vector Illustration">
+          </div>
         </div>
-      </div>
+
+        <div class="outer box">
+          <img src="./images/illustration-box-desktop.svg" alt="Vector Illustration Box">
+        </div>
+      </section>
+
+      <section class="image image-mobile">
+        <div class="illustration">
+          <img src="./images/illustration-woman-online-mobile.svg" alt="Vector Illustration" class="woman">
+          <img src="./images/bg-pattern-desktop.svg" alt="Vector Illustration Shadow" class="pattern">
+        </div>
+      </section>
 
       <section class="content">
-        <h1>FAQ</h1>
-        <ul>
-          <li>
-            <div class="main-text">
+        <h1 class="faq-title">FAQ</h1>
+
+        <ul class="faq-list">
+          <li class="faq">
+            <div class="question">
               <p>How many team members can I invite?</p>
               <img src="./images/icon-arrow-down.svg" alt="" class="arrow">
             </div>
 
-            <div class="sec-text">
+            <div class="answer">
               <p>You can invite up to 2 additional users on the Free plan. There is no limit on
                 team members for the Premium plan.</p>
             </div>
           </li>
 
-          <li class="active">
-            <div class="main-text">
+          <li class="faq ">
+            <div class="question">
               <p>What is the maximum file upload size?</p>
               <img src="./images/icon-arrow-down.svg" alt="" class="arrow">
             </div>
 
-            <div class="sec-text">
+            <div class="answer">
               <p>No more than 2GB. All files in your account must fit your allotted storage space.</p>
             </div>
           </li>
 
-          <li>
-            <div class="main-text">
+          <li class="faq">
+            <div class="question">
               <p>How do I reset my password?</p>
               <img src="./images/icon-arrow-down.svg" alt="" class="arrow">
             </div>
 
-            <div class="sec-text">
+            <div class="answer">
               <p>Click “Forgot password” from the login page or “Change password” from your profile page.
                 A reset link will be emailed to you.</p>
             </div>
           </li>
 
-          <li>
-            <div class="main-text">
+          <li class="faq">
+            <div class="question">
               <p>Can I cancel my subscription?</p>
               <img src="./images/icon-arrow-down.svg" alt="" class="arrow">
             </div>
 
-            <div class="sec-text">
+            <div class="answer">
               <p>Yes! Send us a message and we’ll process your request no questions asked.</p>
             </div>
           </li>
 
-          <li>
-            <div class="main-text">
+          <li class="faq">
+            <div class="question">
               <p>Do you provide additional support?</p>
               <img src="./images/icon-arrow-down.svg" alt="" class="arrow">
             </div>
 
-            <div class="sec-text">
+            <div class="answer">
               <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
             </div>
           </li>
@@ -96,7 +112,7 @@
     Coded by <a href="https://github.com/MuhammadM1998" target="_blank">Muhammad Mahmoud</a>.
   </footer>
 
-  <script src="./script.js"></script>
+  <script src="./javascript/script.js"></script>
 </body>
 
 </html>

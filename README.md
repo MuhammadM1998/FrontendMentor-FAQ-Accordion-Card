@@ -1,6 +1,6 @@
-# Frontend Mentor - Profile Card Component Solution
+# Frontend Mentor - FAQ Accordion Card
 
-This is a solution to the [[Profile Card Component Challenge on Frontend Mentor]](https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ).
+This is a solution to the [[FAQ Aaccordion Challenge on Frontend Mentor]](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam).
 Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
@@ -28,14 +28,18 @@ Desktop
 
 ![Screenshot-Desktop.png](images/Screenshot-Desktop.png)
 
+Active State
+
+![Screenshot-ActiveState.png](images/Screenshot-ActiveState.png)
+
 Mobile
 
 ![Screenshot-Mobile.png](images/Screenshot-Mobile.png)
 
 ### Links
 
--   [Solution URL](https://github.com/MuhammadM1998/Profile-Card-Component)
--   [Live Site URL](https://muhammadm1998.github.io/Profile-Card-Component/)
+-   [Solution URL](https://github.com/MuhammadM1998/FAQ-Accordion-Card)
+-   [Live Site URL](https://muhammadm1998.github.io/FAQ-Accordion-Card/)
 
 ## My process
 
