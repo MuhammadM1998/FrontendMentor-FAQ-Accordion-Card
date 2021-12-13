@@ -48,7 +48,6 @@ Mobile
 -   HTML5
 -   CSS3
 -   CSS Flexbox
--   CSS Grid
 -   Desktop-First Design
 
 ## Author
